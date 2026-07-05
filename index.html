@@ -160,6 +160,32 @@
     border-top: 1px dashed var(--rule);
   }
 
+  .say-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--rule);
+    background: transparent;
+    color: var(--amber);
+    cursor: pointer;
+    font-size: 15px;
+    padding: 0;
+    line-height: 1;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  }
+
+  .say-btn:hover{
+    border-color: var(--amber);
+    background: rgba(232,163,61,0.08);
+  }
+
+  .say-btn:active{
+    transform: scale(0.92);
+  }
+
   footer{
     max-width: 720px;
     margin: 40px auto 0;
@@ -191,6 +217,7 @@
   <div class="entry" id="consideration">
     <div class="word-row">
       <span class="word">consideration</span>
+      <button class="say-btn" onclick="speak('consideration')" aria-label="Play pronunciation">🔊</button>
       <span class="phon">/kənˌsɪdəˈreɪʃn/</span>
       <span class="pos">noun</span>
     </div>
@@ -202,6 +229,7 @@
   <div class="entry" id="scholarship">
     <div class="word-row">
       <span class="word">scholarship</span>
+      <button class="say-btn" onclick="speak('scholarship')" aria-label="Play pronunciation">🔊</button>
       <span class="phon">/ˈskɒlərʃɪp/</span>
       <span class="pos">noun</span>
     </div>
@@ -213,6 +241,7 @@
   <div class="entry" id="hot-shot">
     <div class="word-row">
       <span class="word">hot shot</span>
+      <button class="say-btn" onclick="speak('hot shot')" aria-label="Play pronunciation">🔊</button>
       <span class="phon">/ˈhɒt ʃɒt/</span>
       <span class="pos">idiom</span>
     </div>
@@ -224,6 +253,7 @@
   <div class="entry" id="referee">
     <div class="word-row">
       <span class="word">referee</span>
+      <button class="say-btn" onclick="speak('referee')" aria-label="Play pronunciation">🔊</button>
       <span class="phon">/ˌrɛfəˈriː/</span>
       <span class="pos">verb</span>
     </div>
@@ -235,6 +265,7 @@
   <div class="entry" id="recurring-segments">
     <div class="word-row">
       <span class="word">recurring segments</span>
+      <button class="say-btn" onclick="speak('recurring segments')" aria-label="Play pronunciation">🔊</button>
       <span class="phon">/rɪˈkɜːrɪŋ ˈsɛɡmənts/</span>
       <span class="pos">noun phrase</span>
     </div>
@@ -246,6 +277,7 @@
   <div class="entry" id="memorable">
     <div class="word-row">
       <span class="word">memorable</span>
+      <button class="say-btn" onclick="speak('memorable')" aria-label="Play pronunciation">🔊</button>
       <span class="phon">/ˈmɛmərəbl/</span>
       <span class="pos">adjective</span>
     </div>
@@ -257,12 +289,13 @@
   <div class="entry" id="doze-off">
     <div class="word-row">
       <span class="word">doze off</span>
+      <button class="say-btn" onclick="speak('doze off')" aria-label="Play pronunciation">🔊</button>
       <span class="phon">/dəʊz ɒf/</span>
       <span class="pos">phrasal verb</span>
     </div>
     <p class="def">To fall asleep lightly or accidentally, often without meaning to.</p>
     <p class="example">He dozed off on the couch while watching TV.</p>
-    <p class="fa">ناخواسته به خواب رفتن، یواش‌یواش به خواب رفتن</p>
+    <p class="fa">خواب سبک بردن، پینکی بردن</p>
   </div>
 
 </main>
@@ -271,6 +304,19 @@
   Link straight to a word by adding <code>#word</code> to this page's address — for example <code>…/index.html#scholarship</code>. Tapping that link opens the page already scrolled to that card, and it glows for a moment so it's easy to spot.
 </footer>
 
+<script>
+  function speak(text){
+    if(!('speechSynthesis' in window)){
+      alert('Sorry, your browser does not support audio pronunciation.');
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US';
+    utterance.rate = 0.9;
+    window.speechSynthesis.speak(utterance);
+  }
+</script>
+
 </body>
 </html>
-
