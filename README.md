@@ -1,1 +1,265 @@
 # Glossary
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0b0b0d;
+    --bg-card: #121215;
+    --film: #1a1a1e;
+    --paper: #f4efe6;
+    --paper-dim: #b9b3a6;
+    --amber: #e8a33d;
+    --teal: #3e6b62;
+    --rule: #2a2a2e;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--paper);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 0 0 80px;
+  }
+
+  header{
+    padding: 56px 24px 40px;
+    max-width: 720px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .eyebrow{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin: 0 0 14px;
+  }
+
+  h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(32px, 6vw, 44px);
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+  }
+
+  header p{
+    color: var(--paper-dim);
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 52ch;
+    margin: 0;
+  }
+
+  main{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 24px 0;
+  }
+
+  .entry{
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 28px 28px 24px;
+    margin-bottom: 20px;
+    scroll-margin-top: 40px;
+    transition: box-shadow 0.6s ease, border-color 0.6s ease;
+  }
+
+  .entry:target{
+    border-color: var(--amber);
+    box-shadow: 0 0 0 1px var(--amber), 0 0 40px -4px rgba(232,163,61,0.35);
+    animation: flash 1.4s ease;
+  }
+
+  @keyframes flash{
+    0%   { background: var(--film); }
+    100% { background: var(--bg-card); }
+  }
+
+  .word-row{
+    display:flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+
+  .word{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 26px;
+    color: var(--paper);
+  }
+
+  .phon{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--teal);
+  }
+
+  .pos{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--paper-dim);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 2px 7px;
+  }
+
+  .def{
+    font-size: 16px;
+    line-height: 1.55;
+    margin: 10px 0 14px;
+    color: var(--paper);
+  }
+
+  .example{
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--paper-dim);
+    padding-left: 14px;
+    border-left: 2px solid var(--amber);
+    margin: 0 0 12px;
+  }
+
+  .source{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: var(--amber);
+    text-transform: uppercase;
+  }
+
+  footer{
+    max-width: 720px;
+    margin: 40px auto 0;
+    padding: 0 24px;
+    color: var(--paper-dim);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  footer code{
+    font-family: 'IBM Plex Mono', monospace;
+    background: var(--bg-card);
+    padding: 1px 6px;
+    border-radius: 4px;
+    color: var(--amber);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">Word Notes — dialogue vocabulary</p>
+  <h1>Look it up mid‑scene.</h1>
+  <p>Every word below has its own link. Send someone straight to a definition — the card lights up when they land on it.</p>
+</header>
+
+<main>
+
+  <div class="entry" id="consideration">
+    <div class="word-row">
+      <span class="word">consideration</span>
+      <span class="phon">/kənˌsɪdəˈreɪʃn/</span>
+      <span class="pos">noun</span>
+    </div>
+    <p class="def">Careful thought about someone's feelings or needs before acting.</p>
+    <p class="example">"When is it ever my turn for some consideration?"</p>
+    <p class="source">This Boy's Life · 1993</p>
+  </div>
+
+  <div class="entry" id="scholarship">
+    <div class="word-row">
+      <span class="word">scholarship</span>
+      <span class="phon">/ˈskɒlərʃɪp/</span>
+      <span class="pos">noun</span>
+    </div>
+    <p class="def">Money given to a student to help pay for their education, usually based on merit.</p>
+    <p class="example">"Toby got the scholarship. $2,300."</p>
+    <p class="source">This Boy's Life · 1993</p>
+  </div>
+
+  <div class="entry" id="hot-shot">
+    <div class="word-row">
+      <span class="word">hot shot</span>
+      <span class="phon">/ˈhɒt ʃɒt/</span>
+      <span class="pos">idiom</span>
+    </div>
+    <p class="def">Someone who acts important or shows off their skill, often mockingly.</p>
+    <p class="example">"You pull that hot shot stuff around me..."</p>
+    <p class="source">This Boy's Life · 1993</p>
+  </div>
+
+  <div class="entry" id="referee">
+    <div class="word-row">
+      <span class="word">referee</span>
+      <span class="phon">/ˌrɛfəˈriː/</span>
+      <span class="pos">verb</span>
+    </div>
+    <p class="def">To step in and judge a dispute between two people, usually to keep it fair.</p>
+    <p class="example">"I will not referee!"</p>
+    <p class="source">This Boy's Life · 1993</p>
+  </div>
+
+  <div class="entry" id="recurring-segments">
+    <div class="word-row">
+      <span class="word">recurring segments</span>
+      <span class="phon">/rɪˈkɜːrɪŋ ˈsɛɡmənts/</span>
+      <span class="pos">noun phrase</span>
+    </div>
+    <p class="def">Fixed, repeating parts of a show or channel that come back regularly, each with its own format or theme.</p>
+    <p class="example">"My channel has a few recurring segments, and I separate them using hashtags."</p>
+    <p class="source">channel notes</p>
+  </div>
+
+  <div class="entry" id="memorable">
+    <div class="word-row">
+      <span class="word">memorable</span>
+      <span class="phon">/ˈmɛmərəbl/</span>
+      <span class="pos">adjective</span>
+    </div>
+    <p class="def">Worth remembering; easy to recall because it stands out or leaves a strong impression.</p>
+    <p class="example">"I love collecting memorable lines from both books and films!"</p>
+    <p class="source">channel notes</p>
+  </div>
+
+  <div class="entry" id="doze-off">
+    <div class="word-row">
+      <span class="word">doze off</span>
+      <span class="phon">/dəʊz ɒf/</span>
+      <span class="pos">phrasal verb</span>
+    </div>
+    <p class="def">To fall asleep lightly or accidentally, often without meaning to.</p>
+    <p class="example">"Perfect for reading right before you doze off."</p>
+    <p class="source">channel notes</p>
+  </div>
+
+</main>
+
+<footer>
+  Link straight to a word by adding <code>#word</code> to this page's address — for example <code>…/glossary.html#scholarship</code>. Tapping that link opens the page already scrolled to that card, and it glows for a moment so it's easy to spot.
+</footer>
+
+</body>
+</html>
