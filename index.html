@@ -149,6 +149,17 @@
     text-transform: uppercase;
   }
 
+  .fa{
+    direction: rtl;
+    text-align: right;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--teal);
+    margin: 0 0 14px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--rule);
+  }
+
   footer{
     max-width: 720px;
     margin: 40px auto 0;
@@ -170,7 +181,7 @@
 <body>
 
 <header>
-  <p class="eyebrow">Word Notes — dialogue vocabulary</p>
+  <p class="eyebrow">Word Notes — vocabulary</p>
   <h1>Look it up mid‑scene.</h1>
   <p>Every word below has its own link. Send someone straight to a definition — the card lights up when they land on it.</p>
 </header>
@@ -184,8 +195,8 @@
       <span class="pos">noun</span>
     </div>
     <p class="def">Careful thought about someone's feelings or needs before acting.</p>
-    <p class="example">"When is it ever my turn for some consideration?"</p>
-    <p class="source">This Boy's Life · 1993</p>
+    <p class="example">She always shows consideration for her coworkers' time.</p>
+    <p class="fa">ملاحظه، توجه به احساسات یا نیاز دیگران</p>
   </div>
 
   <div class="entry" id="scholarship">
@@ -195,8 +206,8 @@
       <span class="pos">noun</span>
     </div>
     <p class="def">Money given to a student to help pay for their education, usually based on merit.</p>
-    <p class="example">"Toby got the scholarship. $2,300."</p>
-    <p class="source">This Boy's Life · 1993</p>
+    <p class="example">He got a full scholarship to study engineering.</p>
+    <p class="fa">بورسیه تحصیلی</p>
   </div>
 
   <div class="entry" id="hot-shot">
@@ -206,8 +217,8 @@
       <span class="pos">idiom</span>
     </div>
     <p class="def">Someone who acts important or shows off their skill, often mockingly.</p>
-    <p class="example">"You pull that hot shot stuff around me..."</p>
-    <p class="source">This Boy's Life · 1993</p>
+    <p class="example">Stop acting like such a hot shot in front of the new employees.</p>
+    <p class="fa">آدم خودشیرین یا پرمدعا</p>
   </div>
 
   <div class="entry" id="referee">
@@ -217,15 +228,49 @@
       <span class="pos">verb</span>
     </div>
     <p class="def">To step in and judge a dispute between two people, usually to keep it fair.</p>
-    <p class="example">"I will not referee!"</p>
-    <p class="source">This Boy's Life · 1993</p>
+    <p class="example">I'm not going to referee every argument between you two.</p>
+    <p class="fa">داوری کردن، میانجی‌گری کردن</p>
+  </div>
+
+  <div class="entry" id="recurring-segments">
+    <div class="word-row">
+      <span class="word">recurring segments</span>
+      <span class="phon">/rɪˈkɜːrɪŋ ˈsɛɡmənts/</span>
+      <span class="pos">noun phrase</span>
+    </div>
+    <p class="def">Fixed, repeating parts of a show or channel that come back regularly, each with its own format or theme.</p>
+    <p class="example">The podcast has a few recurring segments, like a weekly news roundup.</p>
+    <p class="fa">بخش‌های تکرارشونده و ثابت یک برنامه</p>
+  </div>
+
+  <div class="entry" id="memorable">
+    <div class="word-row">
+      <span class="word">memorable</span>
+      <span class="phon">/ˈmɛmərəbl/</span>
+      <span class="pos">adjective</span>
+    </div>
+    <p class="def">Worth remembering; easy to recall because it stands out or leaves a strong impression.</p>
+    <p class="example">Our trip to the mountains was one of the most memorable weekends of the year.</p>
+    <p class="fa">به‌یادماندنی، فراموش‌نشدنی</p>
+  </div>
+
+  <div class="entry" id="doze-off">
+    <div class="word-row">
+      <span class="word">doze off</span>
+      <span class="phon">/dəʊz ɒf/</span>
+      <span class="pos">phrasal verb</span>
+    </div>
+    <p class="def">To fall asleep lightly or accidentally, often without meaning to.</p>
+    <p class="example">He dozed off on the couch while watching TV.</p>
+    <p class="fa">خواب سبک بردن، پینکی بردن</p>
   </div>
 
 </main>
 
 <footer>
-  Link straight to a word by adding <code>#word</code> to this page's address — for example <code>…/glossary.html#scholarship</code>. Tapping that link opens the page already scrolled to that card, and it glows for a moment so it's easy to spot.
+  Link straight to a word by adding <code>#word</code> to this page's address — for example <code>…/index.html#scholarship</code>. Tapping that link opens the page already scrolled to that card, and it glows for a moment so it's easy to spot.
 </footer>
 
 </body>
 </html>
+
